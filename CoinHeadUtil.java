@@ -255,7 +255,6 @@ public class CoinHeadUtil {
 
     private static String generateUUIDFromBase64(String base64) {
         try {
-            // ใช้ hash ของ base64 สร้าง UUID
             int hash = base64.hashCode();
             long most = hash;
             long least = hash * 31L;
@@ -352,11 +351,11 @@ public class CoinHeadUtil {
     private static String getFallbackPlayerName(CoinType coinType) {
         switch (coinType) {
             case RARE:
-                return "jeb_"; // หัวสีรุ้ง
+                return "jeb_";
             case LEGENDARY:
-                return "Notch"; // หัวผู้สร้าง Minecraft
+                return "Notch";
             default:
-                return "Steve"; // หัวพื้นฐาน
+                return "Steve";
         }
     }
 
